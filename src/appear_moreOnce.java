@@ -35,30 +35,16 @@ public class appear_moreOnce {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        int n = s.length();
-        String sr = "";
+        char c[] = s.toCharArray();
+        LinkedHashSet<Character> ts = new LinkedHashSet<>();
+        for (int i = 0; i < c.length; i++) {
+            ts.add(c[i]);
+        }
+       Iterator<Character> it = ts.iterator();
+        while(it.hasNext())
+        {
+            System.out.print(it.next());
+        }
 
-        for (int i = 0; i < n; i++) {
-            int count = 1;
-            int flag =0;
-            for ( int j = 0; j < n ; j++) {
-                if (i != j && s.charAt(i) == s.charAt(j)) {
-                    flag =1;
-                    count++;
-                }
-            }
-            if (count >= 2  && !sr.contains(String.valueOf(s.charAt(i)))) {
-                sr += s.charAt(i);
-            }
-            else if(flag ==0)
-            {
-                sr+=s.charAt(i);
-            }
-        }
-        if (sr.isEmpty()) {
-            System.out.print(s);
-        } else {
-            System.out.print(sr);
-        }
     }
 }
