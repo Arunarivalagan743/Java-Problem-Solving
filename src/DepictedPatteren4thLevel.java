@@ -7,7 +7,8 @@ public class DepictedPatteren4thLevel {
         int s =2*n-1;
         for (int i = 0; i < s; i++) {
             for (int j = 0; j < s; j++) {
-                System.out.print(n- Math.min(Math.min(i,j),Math.min(s-1-i,s-1-j))+" ");
+                System.out.print("Depicted pattern : " + " " +  (n- Math.min(Math.min(i,j),Math.min(s-1-i,s-1-j))+" "));
+
 
             }
 
